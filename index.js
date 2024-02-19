@@ -6,6 +6,10 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send("Welcome")
+})
+
 app.get('/getDayOfWeek/:date', (req, res) => {
     const dateStr = req.params.date;
     
